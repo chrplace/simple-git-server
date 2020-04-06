@@ -1,0 +1,10 @@
+version: '2.0'
+services:
+  gitrepo:
+    image: alpine/git
+    entrypoint: /bin/sh
+    command: /mnt/scripts/entrypoint.sh
+    ports:
+    - "2222:22"
+    volumes:
+    - ./mounts:/mnt
